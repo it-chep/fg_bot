@@ -2,11 +2,11 @@ package tg_bot
 
 import (
 	"context"
+	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"net/http"
 
 	"fg_bot/internal/pkg/logger"
 	"fg_bot/internal/pkg/tg_bot/bot_dto"
-	
 )
 
 type Config interface {
