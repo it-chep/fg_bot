@@ -39,7 +39,6 @@ WORKDIR /app
 # Копируем бинарник из builder stage
 COPY --from=builder /app/main /app/main
 COPY --from=builder /app/.env /app/.env
-COPY --from=builder /app/k8s /app/k8s
 
 EXPOSE 8080 7002
 
