@@ -105,8 +105,7 @@ func (a *App) initWorkers(_ context.Context) *App {
 	}
 
 	workers := []worker_pool.Worker{
-		//worker_pool.NewWorker(a.modules.Bot.Actions.ReportReminder, "0 21 * * *", location),
-		worker_pool.NewWorker(a.modules.Bot.Actions.ReportReminder, "* * * * *", location),
+		worker_pool.NewWorker(a.modules.Bot.Actions.ReportReminder, "0 21 * * *", location),
 	}
 
 	a.workerPool = worker_pool.NewWorkerPool(workers)
