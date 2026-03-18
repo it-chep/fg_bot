@@ -37,7 +37,7 @@ func (h *Handler) bot() http.HandlerFunc {
 			messageID = event.Message.MessageID
 		}
 
-		if len(event.Message.Caption) != 0 {
+		if event.Message != nil && len(event.Message.Caption) != 0 {
 			txt = fmt.Sprintf("%s (отчет с медиа)", event.Message.Caption)
 		}
 
